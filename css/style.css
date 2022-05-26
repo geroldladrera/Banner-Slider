@@ -24,8 +24,9 @@ img {
 .slideshow-container {
     position: relative;
     margin: auto;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     height: 620px;
+    box-shadow: 5px 10px 18px #888888;
 }
 
 /* Caption text */
