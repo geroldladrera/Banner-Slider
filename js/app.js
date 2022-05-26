@@ -26,9 +26,9 @@ fetch("https://fakestoreapi.com/products").then((data)=>{
     return data.json();
 }).then((completedata)=>{
     console.log(completedata);
-    let data = "";
+    let data_images = "";
     completedata.map((values)=>{
-        data += `
+        data_images += `
             <div class="mySlides fade">
                 <div class="numbertext">${values.id} / ${Object.keys(completedata).length}</div>
                 <img src="${values.image}" alt="img-slider" style="width:100%">
@@ -36,7 +36,9 @@ fetch("https://fakestoreapi.com/products").then((data)=>{
             </div>
         `
     });
-    document.getElementById("mySlider").innerHTML = data;
+    document.getElementById("mySlider").innerHTML = data_images;
+    
+
 }).catch((err)=>{
     console.log(err);    
 })
